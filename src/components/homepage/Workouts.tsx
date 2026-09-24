@@ -1,3 +1,4 @@
+import { TWorkout } from "@/types/workouts.type";
 import { completeSoftNavigation } from "next/dist/client/components/segment-cache/navigation";
 import React from "react";
 
@@ -11,7 +12,13 @@ const Workouts = async () => {
   const workoutsData = await getWorkouts();
   console.log(workoutsData);
 
-  return <div></div>;
+  return (
+    <div>
+      {workoutsData.map((workout: TWorkout) => {
+        return <div key={workout.id}>{workout.name}</div>;
+      })}
+    </div>
+  );
 };
 
 export default Workouts;
