@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-page: #0b0b0d;
+  --color-card: #131316;
+  --color-line: #26262b;
+  --color-accent: #ccff00;
+  --color-muted: #9a9aa2;
+
+  --font-display: var(--font-oswald), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+/* Makes the "Browse Workouts" button glide instead of jumping */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-page);
+  color: #ffffff;
+}
